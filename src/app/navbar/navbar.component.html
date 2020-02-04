@@ -1,0 +1,9 @@
+<button name="contact" (click)="browse($event)">Contact</button>
+<button name="mainpage" (click)="browse($event)">Main Page</button>
+
+<div [ngSwitch]="choice">
+    <app-contact *ngSwitchCase="'contact'"></app-contact>
+    <app-mainpage *ngSwitchCase="'mainpage'"></app-mainpage>
+    <div *ngSwitchDefault>Page doesn't Exist</div>
+    
+  </div>
