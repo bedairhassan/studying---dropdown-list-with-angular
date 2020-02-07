@@ -38,9 +38,15 @@ export class MainpageComponent implements OnInit {
   ngOnInit() {
   }
 
-  on_selected_parent(event){
+  on_selected_parent(event){ // I give variable named 'parents'
     let selected_parent = event.target.value;
     console.log(selected_parent)
+    console.log(this.getObject(this.parents,selected_parent))
+  }
+
+  getObject(array,name){
+
+    return array.filter(obj=>obj.name===name)[0]
   }
 
 }
